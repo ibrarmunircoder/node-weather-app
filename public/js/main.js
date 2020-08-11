@@ -8,7 +8,7 @@ searchForm.addEventListener('submit', (e) => {
 
     const city = searchValue.value;
 
-    fetch(`http://localhost:3000/weather?city=${city}`)
+    fetch(`/weather?city=${city}`)
         .then(response => {
             console.log(response);
             return response.json();

@@ -3,6 +3,7 @@ const path = require('path');
 const exhbs = require('express-handlebars');
 
 const routes = require('../routes/index');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -19,6 +20,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(routes());
 
-app.listen(3000, () => {
-    console.log('Development Server is running on port 3000');
+app.listen(port, () => {
+    console.log('Development Server is running on port ' + port);
 });
